@@ -2,9 +2,10 @@
   "name": "customer-identity",
   "version": "1.0.0",
   "description": "customer-identity",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nskumar278/customer-identity/issues"
   },
-  "homepage": "https://github.com/nskumar278/customer-identity#readme"
+  "homepage": "https://github.com/nskumar278/customer-identity#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
