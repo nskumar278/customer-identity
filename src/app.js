@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(helmet())
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use('/contact', contactRouter);
 
