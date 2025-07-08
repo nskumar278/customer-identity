@@ -1,24 +1,22 @@
-'use strict';
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Contacts', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-        allowNull: false
+        allowNull: false,
       },
       phoneNumber: {
         type: Sequelize.STRING,
         allowNull: true,
-        unique: true
+        unique: true,
       },
       email: {
         type: Sequelize.STRING,
         allowNull: true,
-        unique: true
+        unique: true,
       },
       linkedId: {
         type: Sequelize.INTEGER,
@@ -31,21 +29,21 @@ module.exports = {
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.fn('NOW')
+        defaultValue: Sequelize.fn('NOW'),
       },
       updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.fn('NOW')
+        defaultValue: Sequelize.fn('NOW'),
       },
       deletedAt: {
         type: Sequelize.DATE,
-        allowNull: true
-      }
-    })
+        allowNull: true,
+      },
+    });
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('Contacts');
-  }
+  },
 };
