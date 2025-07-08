@@ -11,12 +11,10 @@ module.exports = {
       phoneNumber: {
         type: Sequelize.STRING,
         allowNull: true,
-        unique: true,
       },
       email: {
         type: Sequelize.STRING,
         allowNull: true,
-        unique: true,
       },
       linkedId: {
         type: Sequelize.INTEGER,
